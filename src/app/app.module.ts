@@ -8,8 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, HomeComponent, AboutComponent],
@@ -18,10 +17,14 @@ import {MatButtonModule} from '@angular/material/button';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: 'apiUrl',
+      useValue: 'https://jsonplaceholder.typicode.com'
+    }
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
