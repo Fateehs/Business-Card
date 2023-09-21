@@ -10,7 +10,14 @@
             <ng-template #noEmail>
                 <small>Email information not shared</small>
             </ng-template>
-            <li class="list-group-item">{{card.address}}</li>
+            <li class="list-group-item" *ngIf="card.address; else noAddress">{{card.address.street}}
+                {{card.address.city}}</li>
+            <ng-template #noAddress>
+                <small>Address information not shared</small>
+            </ng-template>
+            <li class="list-group-item"><span *ngIf="card.website">{{card.website}}</span>
+                <small class="text-warning" *ngIf="!card.email">Website information not shared</small>
+            </li>
         </ul>
     </mat-card-content>
 </mat-card>

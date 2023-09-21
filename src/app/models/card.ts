@@ -3,5 +3,9 @@ export interface Card {
   title: string;
   phone: string;
   email?: string;
-  address?: string;
+  address?: {
+    city: string;
+    street: string;
+  };
+  website?: string;
 }
