@@ -1,14 +1,10 @@
 # BusinessCard
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5 and helps you organize your business cards.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-# Todo List
-
-This project helps you organize your business cards.
 
 ## Features
 
